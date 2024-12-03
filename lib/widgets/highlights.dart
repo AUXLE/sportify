@@ -18,7 +18,7 @@ class Highlights extends StatelessWidget {
             children: [
               Container(
                 decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 221, 218, 218),
+                  color: Color.fromRGBO(238, 237, 237, 1),
                 ),
                 child: const Padding(
                   padding: EdgeInsets.all(5.0),

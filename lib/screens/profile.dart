@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sportify/widgets/custom_button.dart';
 import 'package:sportify/widgets/logo.dart';
 import 'package:sportify/widgets/profile_other_options.dart';
@@ -17,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                color: Colors.red,
+                color: const Color.fromRGBO(255, 80, 80, 1),
                 child: Stack(
                   children: [
                     const Positioned(
@@ -50,24 +51,24 @@ class ProfileScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text(
+                              Text(
                                 "WELCOME TO SPORTIFY ID",
                                 textAlign: TextAlign.start,
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w800,
+                                style: GoogleFonts.bebasNeue(
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                 ),
                               ),
                               const SizedBox(
                                 height: 10,
                               ),
-                              const Text(
+                              Text(
                                 "Your Sportify ID grants you access to the\nexclusive offers, personalized content, and\nmore- so you can keep being one of the best\nfans out there.",
                                 textAlign: TextAlign.start,
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w800,
+                                style: GoogleFonts.manrope(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                 ),
                               ),
@@ -76,7 +77,9 @@ class ProfileScreen extends StatelessWidget {
                               ),
                               CustomButton(
                                 text: 'SIGN IN OR JOIN',
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
                                 backgroundColor: Colors.black,
                                 textColor: Colors.white,
                                 fullSize: false,
@@ -111,40 +114,40 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              const Padding(
-                padding: EdgeInsets.all(8.0),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "OTHER OPTIONS",
                       textAlign: TextAlign.start,
-                      style: TextStyle(
+                      style: GoogleFonts.bebasNeue(
                         fontSize: 20,
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w700,
                         color: Colors.black,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    ProfileOtherOptions(title: 'Notifications'),
-                    SizedBox(
+                    const ProfileOtherOptions(title: 'Notifications'),
+                    const SizedBox(
                       height: 20,
                     ),
-                    ProfileOtherOptions(title: 'Privacy'),
-                    SizedBox(
+                    const ProfileOtherOptions(title: 'Privacy'),
+                    const SizedBox(
                       height: 20,
                     ),
-                    ProfileOtherOptions(title: 'Customer Support'),
-                    SizedBox(
+                    const ProfileOtherOptions(title: 'Customer Support'),
+                    const SizedBox(
                       height: 20,
                     ),
-                    ProfileOtherOptions(title: 'App info'),
-                    SizedBox(
+                    const ProfileOtherOptions(title: 'App info'),
+                    const SizedBox(
                       height: 20,
                     ),
-                    ProfileOtherOptions(title: 'App info'),
+                    const ProfileOtherOptions(title: 'App info'),
                   ],
                 ),
               ),

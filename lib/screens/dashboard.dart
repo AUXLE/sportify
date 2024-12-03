@@ -171,8 +171,8 @@ class DashboardScreen extends StatelessWidget {
                       height: 10,
                     ),
                     const Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: const Column(
+                      padding: EdgeInsets.all(16.0),
+                      child: Column(
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,

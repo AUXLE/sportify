@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sportify/screens/create_account.dart';
 import 'package:sportify/screens/sign_in.dart';
 import 'package:sportify/widgets/logo.dart';
-
 import '../widgets/custom_button.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -14,7 +14,7 @@ class OnboardingScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
             const Logo(image: 'assets/logo_red.png', color: Colors.black),
@@ -53,8 +53,9 @@ class OnboardingScreen extends StatelessWidget {
                     "KEEP AN EYE ON\nTHE STADIUM",
                     textAlign: TextAlign.start,
                     style: TextStyle(
-                      fontSize: 45,
-                      fontWeight: FontWeight.w400,
+                      fontSize: 44,
+                      fontWeight: FontWeight.w500,
+                      letterSpacing: 0.5,
                     ),
                   ),
                   const SizedBox(
@@ -62,9 +63,10 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                   Text(
                     "Watch sports live or highlights, read every\nnews from your smartphone",
-                    style: TextStyle(
+                    style: GoogleFonts.manrope(
                       fontSize: 16,
-                      color: Colors.grey[700],
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
                     ),
                   )
                 ],
@@ -88,7 +90,7 @@ class OnboardingScreen extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) => SignInScreen()));
                     },
-                    backgroundColor: Colors.red,
+                    backgroundColor: const Color.fromRGBO(255, 80, 80, 1),
                     textColor: Colors.white,
                   ),
                   const SizedBox(
@@ -103,7 +105,7 @@ class OnboardingScreen extends StatelessWidget {
                               builder: (context) =>
                                   const CreateAccountScreen()));
                     },
-                    backgroundColor: const Color.fromARGB(255, 223, 213, 213),
+                    backgroundColor: const Color.fromRGBO(238, 238, 238, 1),
                     textColor: Colors.black,
                   ),
                 ],

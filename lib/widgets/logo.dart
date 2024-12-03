@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Logo extends StatelessWidget {
   const Logo({
@@ -29,7 +30,7 @@ class Logo extends StatelessWidget {
               ),
               Text(
                 'SPORTIFY',
-                style: TextStyle(
+                style: GoogleFonts.azeretMono(
                   //fontFamily: ,
                   fontSize: 21.05,
                   fontWeight: FontWeight.w600,

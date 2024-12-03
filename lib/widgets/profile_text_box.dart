@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ProfileTextBox extends StatelessWidget {
   const ProfileTextBox({
@@ -22,9 +23,9 @@ class ProfileTextBox extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: const TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w800,
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
                   color: Colors.black,
                 ),
               ),
@@ -36,9 +37,9 @@ class ProfileTextBox extends StatelessWidget {
           ),
           Text(
             content,
-            style: const TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w400,
+            style: GoogleFonts.manrope(
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
               color: Colors.black,
             ),
           ),

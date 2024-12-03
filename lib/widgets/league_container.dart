@@ -12,10 +12,10 @@ class LeagueContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Colors.grey,
+        color: Color.fromRGBO(238, 237, 237, 1),
       ),
-      width: 100,
-      height: 100,
+      width: 80,
+      height: 80,
       child: Image.asset(image),
     );
   }

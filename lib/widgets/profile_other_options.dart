@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ProfileOtherOptions extends StatelessWidget {
   const ProfileOtherOptions({
@@ -15,9 +16,9 @@ class ProfileOtherOptions extends StatelessWidget {
       children: [
         Text(
           title,
-          style: const TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w400,
+          style: GoogleFonts.manrope(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
             color: Colors.black,
           ),
         ),
