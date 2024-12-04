@@ -82,18 +82,14 @@ class ProfileScreen extends StatelessWidget {
                                 //   textColor: Colors.white,
                                 //   fullSize: false,
                                 // ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 120.0),
-                                  child: CustomButton(
-                                    text: 'SIGN IN OR JOIN',
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    backgroundColor: Colors.black,
-                                    textColor: Colors.white,
-                                    fullSize: false,
-                                  ),
+                                CustomButton(
+                                  text: 'SIGN IN OR JOIN',
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  backgroundColor: Colors.black,
+                                  textColor: Colors.white,
+                                  fullSize: false,
                                 ),
                                 const SizedBox(
                                   height: 10,
