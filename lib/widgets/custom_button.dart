@@ -9,6 +9,8 @@ class CustomButton extends StatelessWidget {
     required this.backgroundColor,
     required this.textColor,
     this.fullSize = true,
+    this.time = false,
+    this.dashboard = false,
   });
 
   final String text;
@@ -16,6 +18,8 @@ class CustomButton extends StatelessWidget {
   final Color backgroundColor;
   final Color textColor;
   final bool fullSize;
+  final bool time;
+  final bool dashboard;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +29,38 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor,
-          minimumSize: fullSize ? const Size(double.infinity, 50) : null,
+          minimumSize: fullSize
+              ? const Size(double.infinity, 50)
+              : time
+                  ? const Size(5, 20)
+                  : null,
         ),
-        child: Text(
-          text,
-          style: GoogleFonts.bebasNeue(
-            color: textColor,
-            fontSize: 20,
-            fontWeight: FontWeight.w100,
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            time
+                ? const Icon(
+                    Icons.play_arrow,
+                    color: Colors.white,
+                  )
+                : const SizedBox(
+                    width: 0,
+                  ),
+            Text(
+              text,
+              style: dashboard
+                  ? GoogleFonts.manrope(
+                      color: textColor,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    )
+                  : GoogleFonts.bebasNeue(
+                      color: textColor,
+                      fontSize: time ? 14 : 20,
+                      fontWeight: FontWeight.w100,
+                    ),
+            ),
+          ],
         ),
       ),
     );

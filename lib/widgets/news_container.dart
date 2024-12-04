@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sportify/widgets/custom_button.dart';
 
 class NewsContainer extends StatelessWidget {
@@ -16,26 +17,39 @@ class NewsContainer extends StatelessWidget {
     return Column(
       children: [
         Stack(
+          clipBehavior: Clip.none,
           children: [
             Image.asset(image),
-            CustomButton(
-              text: '04:22',
-              onPressed: () {},
-              backgroundColor: Colors.red,
-              textColor: Colors.white,
-              fullSize: false,
+            Positioned(
+              bottom: -24,
+              left: 35,
+              child: CustomButton(
+                text: '04:22',
+                onPressed: () {},
+                backgroundColor: Colors.red,
+                textColor: Colors.white,
+                fullSize: false,
+                time: true,
+              ),
             ),
           ],
         ),
         const SizedBox(
-          height: 10,
+          height: 30,
         ),
-        const Text('Qatar World Cup 2022'),
+        Text(
+          'Qatar World Cup 2022',
+          style: GoogleFonts.manrope(
+            fontWeight: FontWeight.w500,
+            fontSize: 12,
+          ),
+        ),
         Text(
           title,
-          style: const TextStyle(
-            fontSize: 15.0,
-            fontWeight: FontWeight.w800,
+          textAlign: TextAlign.center,
+          style: GoogleFonts.manrope(
+            fontSize: 14.0,
+            fontWeight: FontWeight.w600,
             color: Colors.black,
           ),
         ),

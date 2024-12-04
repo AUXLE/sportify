@@ -25,7 +25,7 @@ class ProfileTextBox extends StatelessWidget {
                 title,
                 style: GoogleFonts.bebasNeue(
                   fontSize: 20,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w500,
                   color: Colors.black,
                 ),
               ),

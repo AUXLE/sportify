@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Highlights extends StatelessWidget {
   const Highlights({super.key});
@@ -9,7 +10,14 @@ class Highlights extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Row(
         children: [
-          Image.asset('assets/football_jump.png'),
+          Stack(children: [
+            const Positioned(
+              child: Icon(
+                Icons.play_arrow,
+              ),
+            ),
+            Image.asset('assets/football_jump.png'),
+          ]),
           const SizedBox(
             width: 10,
           ),
@@ -20,26 +28,32 @@ class Highlights extends StatelessWidget {
                 decoration: const BoxDecoration(
                   color: Color.fromRGBO(238, 237, 237, 1),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.all(5.0),
-                  child: Text('Highlights'),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    'Highlights',
+                    style: GoogleFonts.manrope(
+                      fontSize: 10,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ),
               ),
-              const Text(
+              Text(
                 'PORTUGAL V SWITZERLAND',
-                style: TextStyle(
-                  fontSize: 15.0,
-                  fontWeight: FontWeight.w800,
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w500,
                   color: Colors.black,
                 ),
               ),
-              const Text(
+              Text(
                 'Watch the highlights from the\nmatch between...',
-                style: TextStyle(
+                style: GoogleFonts.manrope(
                   //fontFamily: ,
                   fontSize: 10,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.grey,
+                  fontWeight: FontWeight.w400,
+                  color: const Color.fromRGBO(91, 87, 87, 1),
                 ),
               )
             ],

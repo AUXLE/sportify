@@ -19,23 +19,29 @@ class DashboardScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Logo(
-                  image: 'assets/logo_red.png',
-                  color: Colors.black,
-                ),
-                Icon(Icons.notifications),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(right: 16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Logo(
+                    image: 'assets/logo_red.png',
+                    color: Colors.black,
+                  ),
+                  Image.asset('assets/bell.png'),
+                ],
+              ),
             ),
             const SizedBox(
               height: 10,
             ),
-            CustomTextfield(
-              controller: searchController,
-              hintText: 'Team, sport or venue',
-              obscureText: false,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: CustomTextfield(
+                controller: searchController,
+                hintText: 'Team, sport or venue',
+                obscureText: false,
+              ),
             ),
             const SizedBox(
               height: 10,
@@ -52,6 +58,7 @@ class DashboardScreen extends StatelessWidget {
                       backgroundColor: Colors.black,
                       textColor: Colors.white,
                       fullSize: false,
+                      dashboard: true,
                     ),
                     CustomButton(
                       text: '⚽️ Football',
@@ -59,6 +66,7 @@ class DashboardScreen extends StatelessWidget {
                       backgroundColor: Colors.white,
                       textColor: Colors.black,
                       fullSize: false,
+                      dashboard: true,
                     ),
                     CustomButton(
                       text: '🏀 Basketball',
@@ -66,6 +74,7 @@ class DashboardScreen extends StatelessWidget {
                       backgroundColor: Colors.white,
                       textColor: Colors.black,
                       fullSize: false,
+                      dashboard: true,
                     ),
                     CustomButton(
                       text: '🏏 Cricket',
@@ -73,6 +82,7 @@ class DashboardScreen extends StatelessWidget {
                       backgroundColor: Colors.white,
                       textColor: Colors.black,
                       fullSize: false,
+                      dashboard: true,
                     ),
                   ],
                 ),
@@ -107,6 +117,10 @@ class DashboardScreen extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
+                    Image.asset('assets/slideIndicator.png'),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     const SliderTitle(title: 'FIFA WORLD CUP'),
                     const SizedBox(
                       height: 10,
@@ -136,6 +150,10 @@ class DashboardScreen extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
+                    Image.asset('assets/slideIndicator.png'),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     const SliderTitle(title: 'ALL LEAGUES'),
                     const SizedBox(
                       height: 10,
@@ -146,23 +164,38 @@ class DashboardScreen extends StatelessWidget {
                         padding: EdgeInsets.only(left: 16.0),
                         child: Row(
                           children: [
-                            LeagueContainer(image: 'assets/lion.png'),
+                            LeagueContainer(
+                              image: 'assets/lion.png',
+                              title: 'Premier\nLeague',
+                            ),
                             SizedBox(
                               width: 20,
                             ),
-                            LeagueContainer(image: 'assets/cbf.png'),
+                            LeagueContainer(
+                              image: 'assets/cbf.png',
+                              title: 'CBF\nLeague',
+                            ),
                             SizedBox(
                               width: 20,
                             ),
-                            LeagueContainer(image: 'assets/ball.png'),
+                            LeagueContainer(
+                              image: 'assets/ball.png',
+                              title: 'LIGU 1\nLeague',
+                            ),
                             SizedBox(
                               width: 20,
                             ),
-                            LeagueContainer(image: 'assets/korean.png'),
+                            LeagueContainer(
+                              image: 'assets/korean.png',
+                              title: 'Korean\nLeague',
+                            ),
                             SizedBox(
                               width: 20,
                             ),
-                            LeagueContainer(image: 'assets/lion.png'),
+                            LeagueContainer(
+                              image: 'assets/lion.png',
+                              title: 'Premier\nLeague',
+                            ),
                           ],
                         ),
                       ),
@@ -187,7 +220,7 @@ class DashboardScreen extends StatelessWidget {
                             ],
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 20,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -203,7 +236,10 @@ class DashboardScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                    )
+                    ),
+                    const SizedBox(
+                      height: 100,
+                    ),
                   ],
                 ),
               ),

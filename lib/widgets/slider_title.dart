@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SliderTitle extends StatelessWidget {
   const SliderTitle({
@@ -23,19 +24,19 @@ class SliderTitle extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          const Row(
+          Row(
             children: [
               Text(
                 'View all',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w400,
+                style: GoogleFonts.manrope(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
                   color: Colors.red,
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.navigate_next_rounded,
-                color: Colors.red,
+                color: Color.fromRGBO(255, 80, 80, 1),
               ),
             ],
           )

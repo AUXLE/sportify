@@ -21,18 +21,14 @@ class ProfileScreen extends StatelessWidget {
                 color: const Color.fromRGBO(255, 80, 80, 1),
                 child: Stack(
                   children: [
-                    const Positioned(
-                      right: 0,
-                      top: 35,
+                    Positioned(
+                      right: -120,
+                      top: -50,
                       child: Opacity(
                         opacity: 0.2,
-                        child: Text(
-                          'SIGN IN',
-                          style: TextStyle(
-                            fontSize: 110,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+                        child: Image.asset(
+                          'assets/Vector.png',
+                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -45,49 +41,65 @@ class ProfileScreen extends StatelessWidget {
                         const SizedBox(
                           height: 55.0,
                         ),
-                        Container(
-                          alignment: const AlignmentDirectional(-0.85, 0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "WELCOME TO SPORTIFY ID",
-                                textAlign: TextAlign.start,
-                                style: GoogleFonts.bebasNeue(
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.white,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          child: Container(
+                            alignment: const AlignmentDirectional(-0.85, 0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "WELCOME TO SPORTIFY ID",
+                                  textAlign: TextAlign.start,
+                                  style: GoogleFonts.bebasNeue(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.white,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                "Your Sportify ID grants you access to the\nexclusive offers, personalized content, and\nmore- so you can keep being one of the best\nfans out there.",
-                                textAlign: TextAlign.start,
-                                style: GoogleFonts.manrope(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.white,
+                                const SizedBox(
+                                  height: 10,
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              CustomButton(
-                                text: 'SIGN IN OR JOIN',
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                backgroundColor: Colors.black,
-                                textColor: Colors.white,
-                                fullSize: false,
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                            ],
+                                Text(
+                                  "Your Sportify ID grants you access to the\nexclusive offers, personalized content, and\nmore- so you can keep being one of the best\nfans out there.",
+                                  textAlign: TextAlign.start,
+                                  style: GoogleFonts.manrope(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                // CustomButton(
+                                //   text: 'SIGN IN OR JOIN',
+                                //   onPressed: () {
+                                //     Navigator.pop(context);
+                                //   },
+                                //   backgroundColor: Colors.black,
+                                //   textColor: Colors.white,
+                                //   fullSize: false,
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 120.0),
+                                  child: CustomButton(
+                                    text: 'SIGN IN OR JOIN',
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    backgroundColor: Colors.black,
+                                    textColor: Colors.white,
+                                    fullSize: false,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -124,7 +136,7 @@ class ProfileScreen extends StatelessWidget {
                       textAlign: TextAlign.start,
                       style: GoogleFonts.bebasNeue(
                         fontSize: 20,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w500,
                         color: Colors.black,
                       ),
                     ),
